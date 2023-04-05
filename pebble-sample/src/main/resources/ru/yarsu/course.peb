@@ -1,0 +1,27 @@
+{% extends "./layout.peb" %}
+{% block title %}{{ course.courseName }}{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/app.css">
+{% endblock %}
+{% block h_1 %}{{ course.courseName }}{% endblock %}
+{% block navig %}
+<ul class="dropdown menu" data-dropdown-menu>
+     <li class="menu-text">Меню:</li>
+          <li>
+             <a href="../course-list.html">Список курсов</a>
+          </li>
+          <li>
+             <a href="../schedule.html">Расписание</a>
+          </li>
+</ul>
+{% endblock %}
+{% block content %}
+<div class="grid-container">
+      <div class="card">
+            <h4>{{ course.courseName }}</h4>
+            <h4>{{ course.lecturerFullName }}</h4>
+            <h4>{{ course.description }}</h4>
+      </div>
+</div>
+{% endblock %}
